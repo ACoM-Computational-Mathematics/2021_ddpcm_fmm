@@ -1,8 +1,9 @@
 # Solver
 EXE=../../../ddPCM/build/tests/main
 # Inputs geometries
-INPUTS=2rvd.inp 2mlt_monomer.inp 1ejg.inp 2mlt.inp 2qho_a.inp 2qho_ab.inp \
-       2qho_abc.inp 2qho_abcd.inp 2qho.inp
+#INPUTS=2rvd.inp 2mlt_monomer.inp 1ejg.inp 2mlt.inp 2qho_a.inp 2qho_ab.inp \
+#       2qho_abc.inp 2qho_abcd.inp 2qho.inp
+INPUTS=2rvd.inp 2mlt_monomer.inp 1ejg.inp 2mlt.inp
 # Number of Lebedev grids
 NGRID:=590
 # Possible PMAX for LMAX=6
@@ -58,7 +59,7 @@ all:	$(FMM)
 	@echo "0.0 ! Debye H\"{u}ckel parameter (ignored in PCM)" >> $(TMP1)
 	@echo "1 ! Jacobi/DIIS iterative solver" >> $(TMP1)
 	@echo "1d-14 ! Relative threshold for the iterative solver" >> $(TMP1)
-	@echo "1000 ! Maximal number of iterations" >> $(TMP1)
+	@echo "100000 ! Maximal number of iterations" >> $(TMP1)
 	@echo "25 ! Number of DIIS extrapolation points" >> $(TMP1)
 	@echo "1 ! whether or not to compute forces" >> $(TMP1)
 	@echo "1 ! Whether or not to use the FMM" >> $(TMP1)
