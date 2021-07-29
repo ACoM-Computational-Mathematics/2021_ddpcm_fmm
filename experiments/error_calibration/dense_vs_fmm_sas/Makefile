@@ -1,7 +1,7 @@
 # Solver
 EXE=../../../ddX/build/src/ddx_driver
 # Inputs geometries
-INPUTS=2rvd.sas.inp 2mlt_monomer.sas.inp 1ejg.sas.inp 2mlt.sas.inp
+INPUTS=2rvd_sas.inp 2mlt_monomer_sas.inp 1ejg_sas.inp 2mlt_sas.inp
 # Possible values of lmax (model degrees) to check
 LMAXS:=6 8 10 12
 # Degree of FMM harmonics
