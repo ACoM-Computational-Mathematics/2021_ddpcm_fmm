@@ -1,34 +1,35 @@
 # Solver
-EXE=../../../ddX/build/src/ddx_driver
+EXE=../../ddX/build/src/ddx_driver
+# Directory with input geometries
+INPUT_DIR=../../geometries
 # Inputs geometries
-INPUTS=2rvd_sas.inp 2mlt_monomer_sas.inp 1ejg_sas.inp 2mlt_sas.inp \
-       2qho_a_sas.inp 2qho_ab_sas.inp 2qho_abc_sas.inp 2qho_abcd_sas.inp \
-       2qho_sas.inp dhfr_sas.inp photo_sas.inp 2gx2_sas.inp \
-       waterglobe_sas.inp waterhuge_sas.inp
+INPUTS=50k_sas.inp 100k_sas.inp
 # Number of Lebedev grids
 NGRID:=590
 # Possible PMAX for LMAX=6
-PMAX6:=0 2 4 5 6 7 8 10 12 15 20
+PMAX6:=6
 # Outputs for LMAX=6
 FMM6:=$(foreach pmax, $(PMAX6), $(foreach input, $(INPUTS:.inp=), \
 	   $(input).6.$(pmax).fmm))
 # Possible PMAX for LMAX=8
-PMAX8:=0 2 4 6 7 8 9 10 12 15 20
+PMAX8:=8
 # Outputs for LMAX=8
 FMM8:=$(foreach pmax, $(PMAX8), $(foreach input, $(INPUTS:.inp=), \
 	   $(input).8.$(pmax).fmm))
 # Possible PMAX for LMAX=10
-PMAX10:=0 2 4 6 8 9 10 11 12 15 20
+PMAX10:=10
 # Outputs for LMAX=10
 FMM10:=$(foreach pmax, $(PMAX10), $(foreach input, $(INPUTS:.inp=), \
 	   $(input).10.$(pmax).fmm))
 # Possible PMAX for LMAX=12
-PMAX12:=0 3 6 8 10 11 12 13 14 16 20
+PMAX12:=12
 # Outputs for LMAX=12
 FMM12:=$(foreach pmax, $(PMAX12), $(foreach input, $(INPUTS:.inp=), \
 	   $(input).12.$(pmax).fmm))
 # All outputs
 FMM=$(FMM6) $(FMM8) $(FMM10) $(FMM12)
+# Simple `make` will do everything
+.DEFAULT_GOAL:=all
 
 # Standard trick to ignore file "all" to build target "all"
 .PHONY:	all clean
@@ -39,7 +40,7 @@ all:	$(FMM)
 
 # Set parameters of each dense test
 %.fmm:	ARGV=$(subst ., ,$*)
-%.fmm:	INPUT=$(firstword $(ARGV)).inp
+%.fmm:	INPUT=$(INPUT_DIR)/$(firstword $(ARGV)).inp
 %.fmm:	LMAX=$(word 2, $(ARGV))
 %.fmm:	PMAX=$(word 3, $(ARGV))
 %.fmm:	OUTPUT=$@
@@ -47,7 +48,7 @@ all:	$(FMM)
 %.fmm:	TMP2=$@.tmp2
 
 # Recipe to prepare fmm results
-%.fmm:	$(INPUT)
+%.fmm:	$(EXE) $(INPUT)
 	@echo Running experiment with input $(INPUT) lmax=$(LMAX) pmax=$(PMAX)
 	@echo "2 ! Print flag" > $(TMP1)
 	@echo "1 ! Number of OpenMP threads" >> $(TMP1)

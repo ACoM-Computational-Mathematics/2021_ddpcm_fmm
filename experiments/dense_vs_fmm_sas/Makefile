@@ -1,5 +1,7 @@
 # Solver
-EXE=../../../ddX/build/src/ddx_driver
+EXE=../../ddX/build/src/ddx_driver
+# Directory with input geometries
+INPUT_DIR=../../geometries
 # Inputs geometries
 INPUTS=2rvd_sas.inp 2mlt_monomer_sas.inp 1ejg_sas.inp 2mlt_sas.inp
 # Possible values of lmax (model degrees) to check
@@ -34,7 +36,7 @@ fmm:	$(FMM)
 
 # Set parameters of each dense test
 %.dense %.fmm:	ARGV=$(subst ., ,$*)
-%.dense %.fmm:	INPUT=$(firstword $(ARGV)).inp
+%.dense %.fmm:	INPUT=$(INPUT_DIR)/$(firstword $(ARGV)).inp
 %.dense %.fmm:	LMAX=$(word 2, $(ARGV))
 %.dense %.fmm:	OUTPUT=$@
 %.dense %.fmm:	TMP1=$@.tmp1
@@ -45,7 +47,7 @@ fmm:	$(FMM)
 %.fmm:		PMAX=40
 
 # Recipe to prepare dense and fmm results
-%:
+%.dense %.fmm:	$(EXE) $(INPUT)
 	@echo Running experiment with input $(INPUT) lmax=$(LMAX) fmm=$(FMM)
 	@echo "2 ! Print flag" > $(TMP1)
 	@echo "1 ! Number of OpenMP threads" >> $(TMP1)
