@@ -956,6 +956,7 @@
     0.41700   41.73508    7.31944   17.05234    1.32000
 =====OUTPUT=====
  Using provided file 2mlt_vdw.10.2.fmm.tmp1 as a config file
+init time: 4.2244E+00 seconds
 mkrhs time: 1.6654E+00 seconds
 iter=   1 relative difference: 1.33014833011645E+00
 iter=   2 relative difference: 1.29817919660403E-01
@@ -968,7 +969,7 @@ iter=   8 relative difference: 9.20143373941365E-07
 iter=   9 relative difference: 1.52790733210536E-07
 iter=  10 relative difference: 2.29751134422680E-08
 iter=  11 relative difference: 3.74022958541014E-09
-ddpcm step time:  1.6491E+01 seconds
+ddpcm step time:  1.6494E+01 seconds
 ddpcm step iterations:   11
 iter=   1 relative difference: 1.00000000000000E+00
 iter=   2 relative difference: 4.36198781611988E-01
@@ -1009,7 +1010,7 @@ iter=  36 relative difference: 3.52988366806468E-08
 iter=  37 relative difference: 1.89013685752342E-08
 iter=  38 relative difference: 1.11196793123864E-08
 iter=  39 relative difference: 6.58947262446285E-09
-ddcosmo step time:  1.5068E+01 seconds
+ddcosmo step time:  1.5093E+01 seconds
 ddcosmo step iterations:   39
 iter=   1 relative difference: 1.00000000000000E+00
 iter=   2 relative difference: 3.14906387176605E-01
@@ -1047,7 +1048,7 @@ iter=  33 relative difference: 3.09407172706783E-08
 iter=  34 relative difference: 2.08061789601173E-08
 iter=  35 relative difference: 1.17558813471268E-08
 iter=  36 relative difference: 7.70053919955922E-09
-adjoint ddcosmo step time:  1.4816E+01 seconds
+adjoint ddcosmo step time:  1.4833E+01 seconds
 adjoint ddcosmo step iterations:   36
 iter=   1 relative difference: 1.00000000000000E+00
 iter=   2 relative difference: 1.10795094666558E-01
@@ -1061,9 +1062,9 @@ iter=   9 relative difference: 6.55198052834828E-07
 iter=  10 relative difference: 9.64900798134453E-08
 iter=  11 relative difference: 1.52535681512637E-08
 iter=  12 relative difference: 2.01761776448327E-09
-adjoint ddpcm step time:  1.8716E+01 seconds
+adjoint ddpcm step time:  1.8715E+01 seconds
 adjoint ddpcm step iterations:   12
-ddx_driver time: 7.8454E+01 seconds
+ddx_driver time: 7.8562E+01 seconds
 Solvation energy: -1.5400231948019532E+000
  Full forces
      1  1.5657387876933380E-004 -3.1220388015371477E-004 -3.9301413181332042E-004

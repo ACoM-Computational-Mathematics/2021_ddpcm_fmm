@@ -661,7 +661,8 @@
    -0.81470   12.72000    4.98200   10.59000    1.67200
 =====OUTPUT=====
  Using provided file 1ejg_vdw.10.9.fmm.tmp1 as a config file
-mkrhs time: 1.5478E+00 seconds
+init time: 2.8944E+00 seconds
+mkrhs time: 1.5474E+00 seconds
 iter=   1 relative difference: 1.31519448971988E+00
 iter=   2 relative difference: 1.57521534439233E-01
 iter=   3 relative difference: 3.82971090174838E-02
@@ -673,7 +674,7 @@ iter=   8 relative difference: 2.84992941768965E-06
 iter=   9 relative difference: 3.98223483247778E-07
 iter=  10 relative difference: 6.17058224517251E-08
 iter=  11 relative difference: 9.69396174075101E-09
-ddpcm step time:  1.4878E+01 seconds
+ddpcm step time:  1.4885E+01 seconds
 ddpcm step iterations:   11
 iter=   1 relative difference: 1.00000000000000E+00
 iter=   2 relative difference: 4.16546329889243E-01
@@ -712,7 +713,7 @@ iter=  34 relative difference: 3.12557140150691E-08
 iter=  35 relative difference: 1.74747035231676E-08
 iter=  36 relative difference: 1.12996470389132E-08
 iter=  37 relative difference: 6.85146759025544E-09
-ddcosmo step time:  1.0170E+01 seconds
+ddcosmo step time:  1.0174E+01 seconds
 ddcosmo step iterations:   37
 iter=   1 relative difference: 1.00000000000000E+00
 iter=   2 relative difference: 2.96855779330025E-01
@@ -748,7 +749,7 @@ iter=  31 relative difference: 5.01254112535917E-08
 iter=  32 relative difference: 2.32171473041857E-08
 iter=  33 relative difference: 1.37088892275280E-08
 iter=  34 relative difference: 7.77276790232099E-09
-adjoint ddcosmo step time:  9.9226E+00 seconds
+adjoint ddcosmo step time:  9.9317E+00 seconds
 adjoint ddcosmo step iterations:   34
 iter=   1 relative difference: 1.00000000000000E+00
 iter=   2 relative difference: 9.06393685817249E-02
@@ -764,7 +765,7 @@ iter=  11 relative difference: 1.41714754547612E-08
 iter=  12 relative difference: 6.68138187851793E-09
 adjoint ddpcm step time:  1.6413E+01 seconds
 adjoint ddpcm step iterations:   12
-ddx_driver time: 6.1995E+01 seconds
+ddx_driver time: 6.2015E+01 seconds
 Solvation energy: -2.2947721733442278E-001
  Full forces
      1 -2.0774640895615233E-004  1.0094305118092471E-003  6.0849686566582378E-004
