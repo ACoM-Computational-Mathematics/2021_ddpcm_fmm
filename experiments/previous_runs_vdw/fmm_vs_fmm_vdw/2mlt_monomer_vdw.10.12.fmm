@@ -482,7 +482,8 @@
     0.41700   29.89039   -4.76700    9.86969    1.32000
 =====OUTPUT=====
  Using provided file 2mlt_monomer_vdw.10.12.fmm.tmp1 as a config file
-mkrhs time: 1.2062E+00 seconds
+init time: 2.0832E+00 seconds
+mkrhs time: 1.2052E+00 seconds
 iter=   1 relative difference: 1.32430683776543E+00
 iter=   2 relative difference: 1.33923007773111E-01
 iter=   3 relative difference: 8.75779836179364E-03
@@ -494,7 +495,7 @@ iter=   8 relative difference: 9.31515893462319E-07
 iter=   9 relative difference: 1.28165113515753E-07
 iter=  10 relative difference: 2.00220139937120E-08
 iter=  11 relative difference: 3.23820734134252E-09
-ddpcm step time:  1.1135E+01 seconds
+ddpcm step time:  1.1139E+01 seconds
 ddpcm step iterations:   11
 iter=   1 relative difference: 1.00000000000000E+00
 iter=   2 relative difference: 4.35344400406023E-01
@@ -532,7 +533,7 @@ iter=  33 relative difference: 5.21073206855432E-08
 iter=  34 relative difference: 2.91388807718871E-08
 iter=  35 relative difference: 1.45290179379451E-08
 iter=  36 relative difference: 8.64197541466942E-09
-ddcosmo step time:  6.8632E+00 seconds
+ddcosmo step time:  6.8639E+00 seconds
 ddcosmo step iterations:   36
 iter=   1 relative difference: 1.00000000000000E+00
 iter=   2 relative difference: 3.13060608905238E-01
@@ -567,7 +568,7 @@ iter=  30 relative difference: 6.71023951484401E-08
 iter=  31 relative difference: 4.07845359524073E-08
 iter=  32 relative difference: 1.90007011629605E-08
 iter=  33 relative difference: 9.72396435101978E-09
-adjoint ddcosmo step time:  6.7014E+00 seconds
+adjoint ddcosmo step time:  6.7028E+00 seconds
 adjoint ddcosmo step iterations:   33
 iter=   1 relative difference: 1.00000000000000E+00
 iter=   2 relative difference: 9.74493010108727E-02
@@ -581,9 +582,9 @@ iter=   9 relative difference: 4.94041651976475E-07
 iter=  10 relative difference: 7.00011367068126E-08
 iter=  11 relative difference: 1.12548367948439E-08
 iter=  12 relative difference: 1.52567473907241E-09
-adjoint ddpcm step time:  1.2107E+01 seconds
+adjoint ddpcm step time:  1.2106E+01 seconds
 adjoint ddpcm step iterations:   12
-ddx_driver time: 4.4370E+01 seconds
+ddx_driver time: 4.4374E+01 seconds
 Solvation energy: -6.2318257024362578E-001
  Full forces
      1  2.3498426680070128E-004  3.9751808215048631E-005 -6.4300027370183834E-004
