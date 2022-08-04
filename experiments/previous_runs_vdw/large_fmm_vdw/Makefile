@@ -3,24 +3,25 @@ EXE=../../ddX/build/src/ddx_driver
 # Directory with input geometries
 INPUT_DIR=../../geometries
 # Inputs geometries
-INPUTS=3kqz_vdw.inp 3jb4_vdw.inp
+#INPUTS=3kqz_vdw.inp 3jb4_vdw.inp
+INPUTS=3jb4_vdw.inp
 # Number of Lebedev grids
 NGRID:=590
 # Possible PMAX for LMAX=6
-PMAX6:=6
-# Outputs for LMAX=6
-FMM6:=$(foreach pmax, $(PMAX6), $(foreach input, $(INPUTS:.inp=), \
-	   $(input).6.$(pmax).fmm))
+#PMAX6:=6
+## Outputs for LMAX=6
+#FMM6:=$(foreach pmax, $(PMAX6), $(foreach input, $(INPUTS:.inp=), \
+#	   $(input).6.$(pmax).fmm))
 # Possible PMAX for LMAX=8
-PMAX8:=8
-# Outputs for LMAX=8
-FMM8:=$(foreach pmax, $(PMAX8), $(foreach input, $(INPUTS:.inp=), \
-	   $(input).8.$(pmax).fmm))
+#PMAX8:=8
+## Outputs for LMAX=8
+#FMM8:=$(foreach pmax, $(PMAX8), $(foreach input, $(INPUTS:.inp=), \
+#	   $(input).8.$(pmax).fmm))
 # Possible PMAX for LMAX=10
-PMAX10:=10
-# Outputs for LMAX=10
-FMM10:=$(foreach pmax, $(PMAX10), $(foreach input, $(INPUTS:.inp=), \
-	   $(input).10.$(pmax).fmm))
+#PMAX10:=10
+## Outputs for LMAX=10
+#FMM10:=$(foreach pmax, $(PMAX10), $(foreach input, $(INPUTS:.inp=), \
+#	   $(input).10.$(pmax).fmm))
 # Possible PMAX for LMAX=12
 PMAX12:=12
 # Outputs for LMAX=12
